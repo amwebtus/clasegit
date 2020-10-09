@@ -1,0 +1,94 @@
+ 3 estados de git : espacio de trabajo , area de preparación , repositorio ( carpeta.git )  
+
+comandos a tomar en cuenta en git  : 
+
+git --help
+
+git -l
+
+git init 
+
+git status 
+
+git add (nombre del archivo a añadir )
+
+git add . ( añade todos los archivos de la carpeta actual a commit ) 
+
+git log
+
+git commit ( nos abrirá el editor para comentar el commit a realizar en git ) 
+
+git commit -m ( permite agregar entre comillas el mensaje del commit sin necesidad de abrir el editor ) 
+
+git commit -am ( permite agregar al repositorio los archivos modificados y crear el mensajes ) no aplica para los nuevos 
+
+git checkout  ( deshacer cambios realizados en un archivo ) hay que poner el nombre del archivo
+
+git checkout -f ( forzamos a que los cambios se deshagan en todos los archivos ) 
+
+git diff ( ver la diferencia de lo que estamos haciendo con lo que está en el repositorio ) 
+
+git diff --stat ( solo nos mostraria la estadistica del archivo ) 
+
+git diff --numstat ( lo mismo de arriba pero en numero ) 
+
+historial de cambios junto con el git checkout y git log 
+
+git checkout (hash del commit que queremos ver ) nos redirige a este commit y queda como cabecera principal ( como si hubieramos viajado en
+el tiempo al commit ) y podemos revisar los cambios y cosas que hemos hecho en dicho commit 
+
+git checkout master  volvemos al master 
+
+git log --oneline lo muestra todo resumido en una sola sola linea con el mensaje 
+
+git log --oneline -n (5) en parentesis es el numero de commit que queremos mostrar 
+
+git log --pretty=format:""  aqui le estamos diciendo como queremos mostrar los commit segun un formato que queramos darle , hay varios estilos
+segun la documentación de git que le podemos colocar  ejemplo : git log --pretty=format:"el autor de %h fue %an"
+
+lineas de tiempo master , dev , testing, stage \
+
+git checkout -b  "nombre de la rama" (branch ) creamos la rama  
+
+git branch , nos muestra las ramas creadas 
+
+git log --oneline --all nos muestra TODO los commit sin importar en que rama estemos
+
+git log --oneline --all --graph --decorated nos grafica con astericos 
+
+con git checkout y git switch podemos cambiar entre las ramas que hayamos creado en git 
+
+el git log siempre va a respetar la linea de tiempo independientemente del cambio en cada rama 
+
+git merge (poner nombre de la rama) | nos permite mezclar las ramas | pendiente cuando se tocan los mismo archivos 
+
+git branch -D ( colocar nombre de la rama ) borrar la rama que colocamos 
+
+git merge --abort ( abortar cambios que vamos a mezclar ) pendientes con los conflictos 
+
+
+.gitignore | arhivo creado y oculto que nos permitirá ignorar archivos que no queramos subir 
+
+git clone | clonar repositorio 
+
+ssh keygen -t rsa ( generando llave publica/privada ) 
+
+git push origin master , subir archivos  a la nube, en este caso github 
+
+git remote -v , para ver donde apunta el origin
+
+no confundir master local con el remoto , revisar que este el master tanto local como remoto 
+
+git fetch origin , nos permite traer de la direccion origin de github donde tengamos archivos de repositorio, revisar primero el log --all
+
+git pull origin master , nos permite traer de la nube github los archivos 
+
+git push  y pull origin (nombre de la rama) nos permitirá subir la rama que queramos a remoto github 
+
+git push --delete origin test  nos permite subir a remoto la opcion de borrar la rama que 
+
+
+
+
+
+
